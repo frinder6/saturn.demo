@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.saturn</groupId>
+    <artifactId>saturn.demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>saturn.base</module>
+        <module>saturn.core</module>
+        <module>saturn.spring.core</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <name>saturn.demo</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.0.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.vip.saturn</groupId>
+                <artifactId>saturn-plugin</artifactId>
+                <version>2.0.3</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.vip.saturn</groupId>
+            <artifactId>saturn-job-api</artifactId>
+            <version>2.0.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vip.saturn</groupId>
+            <artifactId>saturn-executor</artifactId>
+            <version>2.0.3</version>
+            <classifier>zip</classifier>
+            <type>zip</type>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
